@@ -6,6 +6,9 @@ print("Extra Rules:\n\tIf the numbers when rolled add up to a number greater tha
 
 number = int(input("Please choose a number 1 - 100: "))
 
+while number < 1 or number > 100:
+    number = int(input("Your number was invalid, please choose a number 1 - 100: "))
+
 computer_number = random.randint(1, 100)
 
 def roll_dice_for_num_of_rolls(target):

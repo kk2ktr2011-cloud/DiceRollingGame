@@ -1,4 +1,5 @@
 import random
+from functions import roll_dice_for_num_of_rolls, roll_dice_for_num
 
 print("Welcome to this Dice Rolling Game!\nIn this game, you will choose a number, and the computer will roll the die as many times needed to get there\nHowever, the computer will also be playing this game, and if the computer gets a higher number in a lesser amount of rolls, then the computer wins!")
 
@@ -10,36 +11,6 @@ while number < 1 or number > 100:
     number = int(input("Your number was invalid, please choose a number 1 - 100: "))
 
 computer_number = random.randint(1, 100)
-
-def roll_dice_for_num_of_rolls(target):
-    num_to_get = target
-    roll = 0
-    num_of_rolls = 0
-    while num_of_rolls < 20:
-        if roll < num_to_get:
-            roll += random.randint(1, 6)
-            num_of_rolls += 1
-        elif roll > num_to_get:
-            roll -= random.randint(1, 6)
-            num_of_rolls += 1
-        elif roll == num_to_get:
-            break
-    return num_of_rolls
-
-def roll_dice_for_num(target):
-    num_to_get = target
-    roll = 0
-    num_of_rolls = 0
-    while num_of_rolls < 20:
-        if roll < num_to_get:
-            roll += random.randint(1, 6)
-            num_of_rolls += 1
-        elif roll > num_to_get:
-            roll -= random.randint(1, 6)
-            num_of_rolls += 1
-        elif roll == num_to_get:
-            break
-    return roll
 
 computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_number)
 user_num_of_rolls = roll_dice_for_num_of_rolls(number)

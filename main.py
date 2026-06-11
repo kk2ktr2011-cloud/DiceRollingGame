@@ -3,7 +3,7 @@ from functions import roll_dice_for_num_of_rolls, roll_dice_for_num
 
 print("Welcome to this Dice Rolling Game!\nIn this game, you will choose a number, and the computer will roll the die as many times needed to get there\nHowever, the computer will also be playing this game, and if the computer gets a higher number in a lesser amount of rolls, then the computer wins!")
 
-print("Extra Rules:\n\tIf the numbers when rolled add up to a number greater than the target number, then the rolls will be subtracted from the total instead of added.\n\t If there are more than 20 rolls then the run for that player will end and the score will be calculated as the target number divided by 20.\n\tThe score is calculated as the target number divided by the number of rolls it took to get there.")
+print("Extra Rules:\n\tIf the numbers when rolled add up to a number greater than the target number, then the rolls will be subtracted from the total instead of added.\n\t If there are more than 20 rolls then the run for that player will end and the score will be calculated as the target number divided by 20.\n\tThe score is calculated as the target number divided by the number of rolls it took to get there.\n\tIf there is a tie, then there will be an extra round where the amount of numbers possible to pick go down.")
 
 number = int(input("Please choose a number 1 - 100: "))
 
@@ -47,3 +47,102 @@ if computer_score > user_score:
     
 elif user_score > computer_score:
    print("You win!")
+else:
+    print("It's a tie!")
+    tie = True
+
+if tie == True:
+    print("Since there was a tie, we will have an extra round where the amount of numbers possible to pick go down.")
+    round_two = int(input("Please choose a number 1 - 50: "))
+    while round_two < 1 or round_two > 50:
+        round_two = int(input("Your number was invalid, please choose a number 1 - 50: "))
+    computer_round_two = random.randint(1, 50)
+    computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_round_two)
+    user_num_of_rolls = roll_dice_for_num_of_rolls(round_two)
+    user_roll_num = roll_dice_for_num(round_two)
+    computer_roll_num = roll_dice_for_num(computer_round_two)
+    computer_score = computer_round_two / computer_num_of_rolls
+    user_score = round_two / user_num_of_rolls
+    if computer_score > user_score:
+        print("The computer wins!")
+    elif user_score > computer_score:
+        print("You win!")
+    else:
+        print("It's a tie again! Now, even more numbers will be taken away.")
+        tie_2 = True
+
+if tie_2 == True:
+    round_three = int(input("Please choose a number 1 - 25: "))
+    while round_three < 1 or round_three > 25:
+        round_three = int(input("Your number was invalid, please choose a number 1 - 25: "))
+    computer_round_three = random.randint(1, 25)
+    computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_round_three)
+    user_num_of_rolls = roll_dice_for_num_of_rolls(round_three)
+    user_roll_num = roll_dice_for_num(round_three)
+    computer_roll_num = roll_dice_for_num(computer_round_three)
+    computer_score = computer_round_three / computer_num_of_rolls
+    user_score = round_three / user_num_of_rolls
+    if computer_score > user_score:
+        print("The computer wins!")
+    elif user_score > computer_score:
+        print("You win!")
+    else:
+        print("It's a tie again! Now, even more numbers will be taken away.")
+        tie_3 = True
+
+if tie_3 == True:
+    round_four = int(input("Please choose a number 1 - 10: "))
+    while round_four < 1 or round_four > 10:
+        round_four = int(input("Your number was invalid, please choose a number 1 - 10: "))
+    computer_round_four = random.randint(1, 10)
+    computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_round_four)
+    user_num_of_rolls = roll_dice_for_num_of_rolls(round_four)
+    user_roll_num = roll_dice_for_num(round_four)
+    computer_roll_num = roll_dice_for_num(computer_round_four)
+    computer_score = computer_round_four / computer_num_of_rolls
+    user_score = round_four / user_num_of_rolls
+    if computer_score > user_score:
+        print("The computer wins!")
+    elif user_score > computer_score:
+        print("You win!")
+    else:
+        print("It's a tie again! Now, even more numbers will be taken away.")
+        tie_4 = True
+
+if tie_4 == True:
+    round_five = int(input("Please choose a number 1 - 5: "))
+    while round_five < 1 or round_five > 5:
+        round_five = int(input("Your number was invalid, please choose a number 1 - 5: "))
+    computer_round_five = random.randint(1, 5)
+    computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_round_five)
+    user_num_of_rolls = roll_dice_for_num_of_rolls(round_five)
+    user_roll_num = roll_dice_for_num(round_five)
+    computer_roll_num = roll_dice_for_num(computer_round_five)
+    computer_score = computer_round_five / computer_num_of_rolls
+    user_score = round_five / user_num_of_rolls
+    if computer_score > user_score:
+        print("The computer wins!")
+    elif user_score > computer_score:
+        print("You win!")
+    else:
+        print("It's a tie again! Now, even more numbers will be taken away.")
+        tie_5 = True
+
+if tie_5 == True:
+    round_six = int(input("Please choose a number 1 - 3: "))
+    while round_six < 1 or round_six > 3:
+        round_six = int(input("Your number was invalid, please choose a number 1 - 3: "))
+    computer_round_six = random.randint(1, 3)
+    computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_round_six)
+    user_num_of_rolls = roll_dice_for_num_of_rolls(round_six)
+    user_roll_num = roll_dice_for_num(round_six)
+    computer_roll_num = roll_dice_for_num(computer_round_six)
+    computer_score = computer_round_six / computer_num_of_rolls
+    user_score = round_six / user_num_of_rolls
+    if computer_score > user_score:
+        print("The computer wins!")
+    elif user_score > computer_score:
+        print("You win!")
+    else:
+        print("It's a tie again! I am not doing this again, so the computer wins.")
+       

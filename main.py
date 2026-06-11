@@ -1,6 +1,12 @@
 import random
 from functions import roll_dice_for_num_of_rolls, roll_dice_for_num
 
+tie = False
+tie_2 = False
+tie_3 = False
+tie_4 = False
+tie_5 = False
+
 print("Welcome to this Dice Rolling Game!\nIn this game, you will choose a number, and the computer will roll the die as many times needed to get there\nHowever, the computer will also be playing this game, and if the computer gets a higher number in a lesser amount of rolls, then the computer wins!")
 
 print("Extra Rules:\n\tIf the numbers when rolled add up to a number greater than the target number, then the rolls will be subtracted from the total instead of added.\n\t If there are more than 20 rolls then the run for that player will end and the score will be calculated as the target number divided by 20.\n\tThe score is calculated as the target number divided by the number of rolls it took to get there.\n\tIf there is a tie, then there will be an extra round where the amount of numbers possible to pick go down.")

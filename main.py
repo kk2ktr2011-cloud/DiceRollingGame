@@ -24,11 +24,14 @@ apple_user = True
 apple_computer = True
 
 while apple_user == True:
-    if user_roll_num == number and user_num_of_rolls <= 20:
+    if user_roll_num == number and user_num_of_rolls < 20:
         print(f"You rolled a {number} in {user_num_of_rolls} rolls, giving you a score of {user_score}")
         apple_user = False
     elif user_roll_num != number and user_num_of_rolls == 20:
         print(f"You didn't roll a {number} in 20 rolls, but we are giving you a score of {user_score}")
+        apple_user = False
+    else:
+        print(f"You rolled a {number} in {user_num_of_rolls} rolls, giving you a score of {user_score}")
         apple_user = False
 
 while apple_computer == True:

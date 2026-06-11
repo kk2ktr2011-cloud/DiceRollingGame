@@ -2,7 +2,7 @@ import random
 
 print("Welcome to this Dice Rolling Game!\nIn this game, you will choose a number, and the computer will roll the die as many times needed to get there\nHowever, the computer will also be playing this game, and if the computer gets a higher number in a lesser amount of rolls, then the computer wins!")
 
-print("Extra Rules:\n\t if the numbers when rolled add up to a number greater than the target number, then the rolls will be subtracted from the total instead of added.\n\t If there are more than 20 rolls then the run for that player will end and the score will be calculated as the target number divided by 20")
+print("Extra Rules:\n\t if the numbers when rolled add up to a number greater than the target number, then the rolls will be subtracted from the total instead of added.\n\t If there are more than 20 rolls then the run for that player will end and the score will be calculated as the target number divided by 20\n\tThe score is calculated as the target number divided by the number of rolls it took to get there")
 
 number = int(input("Please choose a number 1 - 100: "))
 
@@ -22,7 +22,7 @@ def roll_dice(target):
         elif roll == num_to_get:
             break
     return num_of_rolls
-    
+
 computer_num_of_roles = roll_dice(computer_number)
 user_num_of_rolls = roll_dice(number)
 

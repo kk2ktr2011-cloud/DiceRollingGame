@@ -1,4 +1,4 @@
-import random
+import random, time
 from functions import roll_dice_for_num_of_rolls, roll_dice_for_num
 
 tie = False
@@ -18,8 +18,15 @@ while number < 1 or number > 100:
 
 computer_number = random.randint(1, 100)
 
-computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_number)
+
+print("First is the Player.")
+time.sleep(1.5)
 user_num_of_rolls = roll_dice_for_num_of_rolls(number)
+
+print("Second is the computer.")
+time.sleep(1.5)
+computer_num_of_rolls = roll_dice_for_num_of_rolls(computer_number)
+
 user_roll_num = roll_dice_for_num(number)
 computer_roll_num = roll_dice_for_num(computer_number)
 

@@ -29,3 +29,12 @@ def roll_dice_for_num(target):
         elif roll == num_to_get:
             break
     return roll
+
+def display_number(number):
+    if number == 1:
+        print("""
+                _______
+               |       |
+               |   O   |
+               |_______|
+                            """)

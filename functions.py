@@ -16,7 +16,8 @@ def roll_dice_for_num_of_rolls(target):
             num_of_rolls += 1
             display_number(num_rolled)
         elif roll == num_to_get:
-            break
+            return roll, num_of_rolls
+
     print("That was the last die for this player!")
     return num_of_rolls
 

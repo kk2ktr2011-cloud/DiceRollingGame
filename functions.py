@@ -39,49 +39,55 @@ def roll_dice_for_num(target):
 def display_number(number):
     if number == 1:
         print("""
-                _______
-               |       |
-               |   O   |
-               |_______|
+                 ________
+                /______ /|
+               |       | |
+               |   O   | |
+               |_______|/
                             """)
         time.sleep(1)
     elif number == 2:
         print("""
-                _______
-               | O     |
-               |       |
-               |_____O_|
+                 ________
+                /______ /|
+               | O     | |
+               |       | |
+               |_____O_|/
                             """)
         time.sleep(1)
     elif number == 3:
         print("""
-                _______
-               | O     |
-               |   O   |
-               |_____O_|
+                 ________
+                /______ /|
+               | O     | |
+               |   O   | |
+               |_____O_|/
                             """)
         time.sleep(1)
     elif number == 4:
         print("""
-                _______
-               | O   O |
-               |       |
-               | O___O |
+                 ________
+                /______ /|
+               | O   O | |
+               |       | |
+               | O___O |/
                             """)
         time.sleep(1)
     elif number == 5:
         print("""
-                _______
-               | O   O |
-               |   O   |
-               | O___O |
+                 ________
+                /______ /|
+               | O   O | |
+               |   O   | |
+               | O___O |/
                             """)
         time.sleep(1)    
     elif number == 6:
         print("""
-                _______
-               | O   O |
-               | O   O |
-               | O___O |
+                 ________
+                /______ /|
+               | O   O | |
+               | O   O | |
+               | O___O |/
                             """)
         time.sleep(1)
